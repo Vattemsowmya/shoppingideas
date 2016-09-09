@@ -90,10 +90,10 @@ public class CartController {
 		return "index";
 	}
 
-	@RequestMapping("Payment")
-	public String payment(HttpSession session)
+	@RequestMapping("pay")
+	public String pay(HttpSession session)
 	{
 		cartDAO.pay((int)session.getAttribute("userId"));
-		return "redireck:/index";
+		return "redirect:/index";
 	}
 }

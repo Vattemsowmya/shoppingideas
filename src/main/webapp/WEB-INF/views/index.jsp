@@ -65,54 +65,9 @@
 				</c:choose>
 				</nav>
 				<div class="container">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href=""><span class="glyphicon glyphicon-home"></a></li>
 				
-					<li class="dropdown"><a class="dropdown-toggle"
-						data-toggle="dropdown" href="#">WHAT'S NEW!<span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="#">long frock</a></li>
-							<li><a href="#">kudtha</a></li>
-						</ul></li>
-					<li class="dropdown"><a class="dropdown-toggle"
-						data-toggle="dropdown" href="#">Ethnic Wear<span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="#">long frock</a></li>
-							<li><a href="#">kurtha and kurtis</a></li>
-							<li><a href="#">salwar</a></li>
-							<li><a href="#">sarees</a></li>
-							<li><a href="#">DressMaterial</a></li>
-							<li><a href="#">leggins,Jeggins</a></li>
-							<li><a href="#">Lehengas</a></li>
-						</ul></li>
-					<li class="dropdown"><a class="dropdown-toggle"
-						data-toggle="dropdown" href="#">Western Wear<span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="#">Top wear</a></li>
-							<li><a href="#">Dresses</a></li>
-							<li><a href="#">Jocket coats and shrugs</a></li>
-							<li><a href="#">Jump suits</a></li>
-							<li><a href="#">All Western wear</a></li></ul></li>
-				
-			</ul>	
 			
 		<c:choose>	
-		<c:when test="${!Administrator}">	
-			<!-- Category List -->
-			<c:if test="${!empty categoryList}">
-				<div>
-				
-						<ul class="nav navbar-nav">
-					
-						
-						<c:forEach items="${categoryList}" var="category">
-							<li><a href="${category.name}" class="w3-hover-none"><i class="fa fa-list-alt" aria-hidden="true"></i> ${category.name}</a></li>
-						</c:forEach>
-					
-					</ul>
-				</div>
-			</c:if>	
-		</c:when>	
 	
 		<c:when test="${Administrator}">
 			<ul class="nav navbar-nav">
@@ -207,13 +162,9 @@
 				</div>
 
 				<!-- Left and right controls -->
-				<a class="left carousel-control" href="#myCarousel" role="button"
-					data-slide="prev"> <span
-					class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 					<span class="sr-only">Previous</span>
-				</a> <a class="right carousel-control" href="#myCarousel" role="button"
-					data-slide="next"> <span
-					class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				</a> <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 					<span class="sr-only">Next</span>
 				</a>
 			</div>
@@ -235,6 +186,7 @@
 									<div class="thumbnail">
 										<img height="150px" width="150px" alt="${product.id}"
 											src="<c:url value="/resources/Images/product/${product.id}.jpg"></c:url>">
+											<li>Rs.${product.price}</li>
 										<div class="caption">
 											<p>
 												${product.name}
@@ -242,8 +194,8 @@
 													<c:when test="${LoggedIn}">
 														<form action="addtoCart/${userId}/${product.id}">
 															<input type="number" value="1" name="quantity"
-																class="btn btn-xs btn-primary   col-xs-6 ">
-															<input type="submit" value="Add" class="btn btn-xs col-xs-6 btn-primary">
+																class="btn btn-primary   col-xs-6 ">
+															<input type="submit" value="Add" class="btn btn-primary col-xs-6">
 														</form>
 														
 													</c:when>

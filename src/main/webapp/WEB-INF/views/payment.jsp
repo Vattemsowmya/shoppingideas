@@ -8,7 +8,36 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Payment</title>
-<link href="<c:url value="/resources/css/credit.css" />" rel="stylesheet">
+<style type="text/css">
+input[type=text],select {
+       width=100%;
+       padding:10px 12px;
+       margin: 8px 0;
+       display: inline-block;
+       border:1px solid #ccc;
+       border-radius:4px;
+       box-sizing:border-box;
+       }
+input[type=submit]{
+       width=100%;
+       background-color: #4CAF50;
+       color:white;
+       padding:14px 20px;
+       margin: 8px 0;
+       border:none;
+       border-radius:4px;
+       cursor:pointer;
+       }
+input[type=submit]:hover{
+     background-color:#45a049;
+}
+div{
+    border-radius:5px;
+    align:center;
+    background-color:#f2f2f2;
+    paddding:20px;
+}
+</style>
 </head>
 <body  style="padding-top: 75px">
 <div id="card">
