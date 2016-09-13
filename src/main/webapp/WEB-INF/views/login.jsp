@@ -1,4 +1,3 @@
-
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
@@ -23,7 +22,7 @@
 <div class="panel panel-default">
 <div class="panel-heading">username :<input type="text" name="username" required aria-required="true"></div>
 <div class="panel-body">password:<input type="password" name="password" min="1" max="5" required aria-required="true"></div>
-<div class="panel-footer"><input  type="submit" value="submit"></div>
+<div class="panel-footer"><input  type="submit" class="btn btn-primary" value="submit"></div>
 </div>
 </form>
 </div>

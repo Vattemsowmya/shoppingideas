@@ -17,25 +17,20 @@ public class ProductDAOImpl implements ProductDAO {
 
 	@Autowired
 	private SessionFactory sessionFactory;
-
-	public ProductDAOImpl(SessionFactory sessionFactory) {
+    public ProductDAOImpl(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
 	}
 
 	@Transactional
-
-	public List<Product> list() {
+    public List<Product> list() {
 		@SuppressWarnings("unchecked")
 		List<Product> listProduct = (List<Product>) sessionFactory.getCurrentSession().createCriteria(Product.class)
 				.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();
-
-		return listProduct;
+        return listProduct;
 
 	}
-
-	@Transactional
-
-	public void saveorUpdate(Product product) {
+    @Transactional
+    public void saveorUpdate(Product product) {
 		sessionFactory.getCurrentSession().saveOrUpdate(product);
 	}
 

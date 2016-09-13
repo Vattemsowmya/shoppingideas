@@ -12,13 +12,22 @@
 
 <link href="<c:url value="/resources/css/w3.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/css/font-awesome.min.css" />" rel="stylesheet">
+<style type="text/css">
+pre{
+    border-radius:5px;
+    align:center;
+    background-color:#f2f2f2;
+    paddding:20px;
+}
+     
+</style>
 </head>
 <body>
 <pre>
 
 <c:url var="addAction" value="adduser"></c:url>
 <form:form action="${addAction}" commandName="userDetails" method="post"><br>
-<form:label path="name"><spring:message text="Name" /></form:label><form:input path="name" required="true" />
+<form:label path="name"><spring:message text="Name" /><form:input path="name" required="true" /></form:label>
 <form:label path="userName"><spring:message text="UserName" /></form:label><form:input path="userName" required="true" />
 <form:label path="password"><spring:message text="Password" /></form:label><form:input path="password" required="true" />
 <form:label path="mobile"><spring:message text="Mobile Number" /></form:label><form:input path="mobile" required="true" />

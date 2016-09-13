@@ -15,25 +15,78 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script
+
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <style>
+
 .carousel-inner>.item>img, .carousel-inner>.item>a>img {
 	width: 80%;
 	margin: auto;
 	height: 600;
 }
-</style>
 
+.w3-black,.w3-hover-black:hover{
+color:#fff!important;
+background-color:#808184!important;
+}
+
+.button {
+  border-radius: 1px;
+  background-color: #5f5f5f;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  width: 140px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+
+</style>
 </head>
 <body>
-<img src="E:\shopping-ideas-logo.jpg" width="50" height="50">.
-
-		<nav class="navbar navbar-default">
+<nav class="navbar navbar-default">
 			<div class="container-fluid">
 				<div class="navbar-header">
+				<img src=<c:url value="/resources/Images/shopping-ideas-logo.jpg"/> width="50" height="50">
 					<a class="navbar-brand" href="#">SHOPPINGIDEAS</a>
 					</div>
-							
+					<div class="container">
+				<ul class="nav navbar-nav">
+					<li class="#"><a href=""><span class="glyphicon glyphicon-home"></a></li>
+				
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" href="#">WHAT'S NEW!<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">long frock</a></li>
+							<li><a href="#">kudtha</a></li>
+						</ul></li>
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" href="#">Ethnic Wear<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">long frock</a></li>
+							<li><a href="#">kurtha and kurtis</a></li>
+							<li><a href="#">salwar</a></li>
+							<li><a href="#">sarees</a></li>
+							<li><a href="#">DressMaterial</a></li>
+							<li><a href="#">leggins,Jeggins</a></li>
+							<li><a href="#">Lehengas</a></li>
+						</ul></li>
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" href="#">Western Wear<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Top wear</a></li>
+							<li><a href="#">Dresses</a></li>
+							<li><a href="#">Jocket coats and shrugs</a></li>
+							<li><a href="#">Jump suits</a></li>
+							<li><a href="#">All Western wear</a></li></ul></li>
+						</ul>
 					<c:choose>
 					<c:when test="${LoggedIn}">
 
@@ -63,7 +116,7 @@
 					</ul>
 			</c:otherwise>
 				</c:choose>
-				</nav>
+				</nav></div>
 				<div class="container">
 				
 			
@@ -186,10 +239,11 @@
 									<div class="thumbnail">
 										<img height="150px" width="150px" alt="${product.id}"
 											src="<c:url value="/resources/Images/product/${product.id}.jpg"></c:url>">
-											<li>Rs.${product.price}</li>
+											
 										<div class="caption">
 											<p>
 												${product.name}
+												<li>Rs.${product.price}</li>
 												<c:choose>
 													<c:when test="${LoggedIn}">
 														<form action="addtoCart/${userId}/${product.id}">
@@ -216,6 +270,21 @@
 	</c:if>
 	
 	<!-- Product List End -->
+<!-- Footer -->
+<footer id="myDIV" class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+  <a href="#"><i class="fa fa-facebook-official"></i></a>
+  <a href="#"><i class="fa fa-pinterest-p"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-flickr"></i></a>
+  <a href="#"><i class="fa fa-linkedin"></i></a>
+  <p class="w3-medium">
+              SHOPPINGIDEAS <a href=""> http://localhost:8008/shoppingideas/</a>
+		
+  </p>
+</footer>
+
+
 
 </body>
 </html>
+Q!	
