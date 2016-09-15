@@ -8,7 +8,9 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Payment</title>
+
 <style type="text/css">
+
 input[type=text],select {
        width=100%;
        padding:10px 12px;
@@ -18,32 +20,33 @@ input[type=text],select {
        border-radius:4px;
        box-sizing:border-box;
        }
-input[type=submit]{
+button[type=submit]{
        width=100%;
        background-color: #4CAF50;
        color:white;
-       padding:14px 20px;
+       padding:10px 20px;
        margin: 8px 0;
        border:none;
        border-radius:4px;
        cursor:pointer;
        }
-input[type=submit]:hover{
+button[type=submit]:hover{
      background-color:#45a049;
 }
-div{
+div[class=payment]{
     border-radius:5px;
-    align:center;
     background-color:#f2f2f2;
-    paddding:20px;
-}
+    paddding:12px auto;
+    width:500px;
+
+} 
 </style>
 </head>
-<body  style="padding-top: 75px">
-<div id="card">
-<section class="credit-card visa gr-visa">
-        <div class="logo">Visa</div>
+<body>
+<div style=" text-align:center">
+<div class="payment">
         <form action="pay" method="post">
+       
             <h2>Payment Details</h2>
 
             <ul class="inputs">
@@ -61,11 +64,14 @@ div{
                     <label>CVC Code</label>
                     <input type="text" name="cvc_code" placeholder="xxx" size="3" class="gr-input" required />
                 </li>
-                <li><button type="submit" class="btn btn-xs btn-primary">Pay</button></li>
+                <li><button type="submit" class="btn btn-primary">Pay</button></li>
          
             </ul>
+           
         </form>
-    </section>
+
+   </div>
     </div>
+    
 </body>
 </html>

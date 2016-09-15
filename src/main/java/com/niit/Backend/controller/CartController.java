@@ -76,7 +76,14 @@ public class CartController {
 	{
 		int userId=(int)session.getAttribute("userId");
 		model.addAttribute("CartList",cartDAO.get(userId));
-		model.addAttribute("CartPrice",cartDAO.CartPrice(userId));
+		if (cartDAO.cartsize((int) session.getAttribute("userId")) != 0) {
+			model.addAttribute("CartPrice",cartDAO.CartPrice(userId));
+		}
+		else
+		{
+			model.addAttribute("EmptyCart", "true");
+		}
+		
 		model.addAttribute("IfViewCartClicked", "true");
 		model.addAttribute("HideOthers","true");
 		return "index";

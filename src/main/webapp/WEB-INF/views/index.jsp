@@ -87,6 +87,7 @@ background-color:#808184!important;
 							<li><a href="#">Jump suits</a></li>
 							<li><a href="#">All Western wear</a></li></ul></li>
 						</ul>
+						
 					<c:choose>
 					<c:when test="${LoggedIn}">
 
@@ -115,8 +116,9 @@ background-color:#808184!important;
 						</a></li>
 					</ul>
 			</c:otherwise>
-				</c:choose>
-				</nav></div>
+			</c:choose>
+				</nav>
+			
 				<div class="container">
 				
 			
@@ -175,7 +177,9 @@ background-color:#808184!important;
 </div>
 		<!-- #########################################################################################################################
  -->
-
+<c:choose>	
+	
+		<c:when test="${!Administrator}">
 
 		<div class="container">
 			<br>
@@ -222,7 +226,8 @@ background-color:#808184!important;
 				</a>
 			</div>
 			</div>
-
+</c:when>
+</c:choose>
 			<!-- #########################################################################################################################
  -->
 <!-- Product List-->
@@ -287,4 +292,3 @@ background-color:#808184!important;
 
 </body>
 </html>
-Q!	
