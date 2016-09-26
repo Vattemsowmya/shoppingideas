@@ -12,8 +12,7 @@
 </head>
 <body>
 <c:url var="addAction" value="addcategory"></c:url>
-
-	<h1>SUPPLIER MODULE</h1>
+	<h1 style="text-align:center">SUPPLIER MODULE</h1>
 	<c:url var="addAction" value="addsupplier"></c:url>
 
 	<form:form action="${addAction}" commandName="supplier"
@@ -59,10 +58,10 @@
 
 				<tr>
 					<td colspan="2"><c:if test="${!empty supplier.name}">
-							<input type="submit"
+							<input type="submit" class="w3-btn w3-blue"
 								value="<spring:message text="Edit Supplier"/>" />
 						</c:if> <c:if test="${empty supplier.name}">
-							<input type="submit"
+							<input type="submit" class="w3-btn w3-blue"
 								value="<spring:message text="Add Supplier"/>" />
 						</c:if></td>
 				</tr>
@@ -89,27 +88,25 @@
 						<td>${supplier.id}</td>
 						<td>${supplier.name}</td>
 						<td>${supplier.address}</td>
-
-						<td>
+<td>
 							<form action="editsupplier/${supplier.id}" method="post">
-								<input type="submit" value="Edit">
+								<input type="submit" value="Edit" class="w3-btn w3-blue">
 							</form>
 						</td>
 						<td><form action="removesupplier/${supplier.id}">
-								<input type="submit" value="Delete">
+								<input type="submit" value="Delete" class="w3-btn w3-blue">
 							</form></td>
 					</tr>
 				</c:forEach>
 			</thead>
 		</table>
 	</c:if>
-	<img alt="Image"
+	<%-- <img alt="Image"
 		src="<c:url value="/resources/Images/supplier/,12.jpg" > </c:url>">
 <div style="width:100%; height:40;"></div>
 	<img
 		src="<%=request.getContextPath() +"/resources/Images/supplier/${supplier.id}.jpg" %>"
 		alt="${supplier.id}" />
-	
-
+	 --%>
 </body>
 </html>

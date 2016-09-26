@@ -18,51 +18,228 @@
 
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
 <style>
 
 .carousel-inner>.item>img, .carousel-inner>.item>a>img {
-	width: 80%;
+	width: 150%;
 	margin: auto;
-	height: 600;
+	height: 800;
 }
+
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }
+  .jumbotron {
+      background-color: #f4511e;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+  }
+  .logo {
+      color: #f4511e;
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #f4511e;
+  }
+  .carousel-indicators li {
+      border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+      background-color: #f4511e;
+  }
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid #f4511e;
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #f4511e;
+      background-color: #fff !important;
+      color: #f4511e;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #f4511e !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #f4511e;
+      color: #fff;
+  }
+  .navbar {
+      margin-bottom: -26;
+      background-color: #f4511e;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+      height:120px;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #f4511e !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 5px;
+      color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+  .dropdown-menu{
+      background-color: #282826;
+      font-size:15px;
+  }
 
 .w3-black,.w3-hover-black:hover{
 color:#fff!important;
 background-color:#808184!important;
 }
 
-.button {
-  border-radius: 1px;
-  background-color: #5f5f5f;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 15px;
-  padding: 10px;
-  width: 140px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
+.thumbnail img{
+width: 80%;
+    height: 50%;
+    margin-bottom: 10px;
 }
-
 
 </style>
 </head>
 <body>
 <nav class="navbar navbar-default">
 			<div class="container-fluid">
-				<div class="navbar-header">
-				<img src=<c:url value="/resources/Images/shopping-ideas-logo.jpg"/> width="50" height="50">
+			<div class="navbar-header">
 					<a class="navbar-brand" href="#">SHOPPINGIDEAS</a>
 					</div>
 					<div class="container">
 				<ul class="nav navbar-nav">
-					<li class="#"><a href=""><span class="glyphicon glyphicon-home"></a></li>
+					<li class="active"><a href="http://localhost:8008/shoppingideas/"><span class="glyphicon glyphicon-home"></a></li>
 				
 					<li class="dropdown"><a class="dropdown-toggle"
-						data-toggle="dropdown" href="#">WHAT'S NEW!<span class="caret"></span></a>
+						data-toggle="dropdown" href="#">South wear<span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="#">long frock</a></li>
 							<li><a href="#">kudtha</a></li>
@@ -87,7 +264,6 @@ background-color:#808184!important;
 							<li><a href="#">Jump suits</a></li>
 							<li><a href="#">All Western wear</a></li></ul></li>
 						</ul>
-						
 					<c:choose>
 					<c:when test="${LoggedIn}">
 
@@ -116,12 +292,11 @@ background-color:#808184!important;
 						</a></li>
 					</ul>
 			</c:otherwise>
-			</c:choose>
-				</nav>
-			
+				</c:choose>
+				</nav></div>
 				<div class="container">
 				
-			
+			<br><br>
 		<c:choose>	
 	
 		<c:when test="${Administrator}">
@@ -196,24 +371,24 @@ background-color:#808184!important;
 
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner" role="listbox">
-					<div class="item active" style="width: 80%; height: 500">
-						<img src=<c:url value="/resources/Images/54.jpg" /> alt="HeartRose">
+					<div class="item active" style="width: 80%; height: 700">
+						<img src=<c:url value="/resources/Images/89.jpg" /> alt="HeartRose">
 					</div>
 
-					<div class="item" style="width: 80%; height: 500">
-						<img src=<c:url value="/resources/Images/2.jpg" /> alt="dress">
+					<div class="item" style="width: 80%; height: 700">
+						<img src=<c:url value="/resources/Images/67.jpg" /> alt="dress">
 					</div>
 
-					<div class="item" style="width: 80%; height: 500">
-						<img src=<c:url value="/resources/Images/6.jpg" /> alt="dress">
+					<div class="item" style="width: 80%; height: 700">
+						<img src=<c:url value="/resources/Images/90.jpg" /> alt="dress">
 					</div>
 
-					<div class="item" style="width: 80%; height: 500">
-						<img src=<c:url value="/resources/Images/20.jpg" /> alt="dress">
+					<div class="item" style="width: 80%; height: 700">
+						<img src=<c:url value="/resources/Images/66.jpg" /> alt="dress">
 					</div>
 
-					<div class="item" style="width: 80%; height: 500">
-						<img src=<c:url value="/resources/Images/5.jpg" /> alt="dress">
+					<div class="item" style="width: 80%; height: 700">
+						<img src=<c:url value="/resources/Images/98.jpg" /> alt="dress">
 					</div>
 
 				</div>
@@ -240,15 +415,14 @@ background-color:#808184!important;
 						<div class="row w3-card-8 w3-margin" style="margin-bottom: 0px">
 							<br>
 							<c:forEach items="${productList}" var="product">
-								<div class="col-xs-2 ">
+								<div class="col-xs-3 ">
 									<div class="thumbnail">
-										<img height="150px" width="150px" alt="${product.id}"
+										<img height="130px" width="150px" alt="${product.id}"
 											src="<c:url value="/resources/Images/product/${product.id}.jpg"></c:url>">
-											
+											<li>Rs.${product.price}</li>
 										<div class="caption">
 											<p>
 												${product.name}
-												<li>Rs.${product.price}</li>
 												<c:choose>
 													<c:when test="${LoggedIn}">
 														<form action="addtoCart/${userId}/${product.id}">
@@ -273,22 +447,61 @@ background-color:#808184!important;
 			</c:when>
 		</c:choose>
 	</c:if>
-	
-	<!-- Product List End -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+  <!-- Container -->
+<div  onclick="location.href='http://dir.indiamart.com/hyderabad/party-gowns.html'" class=" w3-center">
+<h3 class="text-center">New Fashion Floor Length Anarkali Frocks Designs Images</h3>
+
+<div class="w3-row"><br>
+
+<div  onclick="location.href='http://dir.indiamart.com/hyderabad/party-gowns.html'" class="w3-quarter">
+  <img src="http://fashionnama.com/wp-content/uploads/2015/10/Orange-Color-Most-Beautiful-Bollywood-Style-Anarkali-Frock-Dress.jpg" alt="Boss" style="width:80%" class="w3-circle w3-hover-opacity">
+  <h3>Bollywood Style </h3>
+  <p>Floor Length Anarkali Dress</p>
+ 
+         
+</div>
+
+<div  onclick="location.href='http://dir.indiamart.com/hyderabad/party-gowns.html'"class="w3-quarter">
+  <img src="http://fashionnama.com/wp-content/uploads/2015/10/Western-Floor-Length-Anarkali-Frocks-Design-Indian-Style-Dress-for-Girls.jpg" alt="Boss" style="width:80%" class="w3-circle w3-hover-opacity">
+  <h3>Western Style</h3>
+  <p> Floor Length Anarkali Frocks Design</p>
+ 
+</div>
+
+<div onclick="location.href='http://dir.indiamart.com/hyderabad/party-gowns.html'" class="w3-quarter">
+  <img src="http://fashionnama.com/wp-content/uploads/2015/05/Contrast-Light-Blue-Bollywood-Frock-Shraddha-Kapoor-Salwar-Churidar-Suit.jpg" alt="Boss" style="width:80%" class="w3-circle w3-hover-opacity">
+  <h3>Stylish Frocks</h3>
+  <p> Churidar Suits Shraddha Kapoor Salwar</p>
+  
+</div>
+
+<div  onclick="location.href='http://dir.indiamart.com/hyderabad/party-gowns.html'" class="w3-quarter">
+  <img src="http://fashionnama.com/wp-content/uploads/2015/10/Off-White-Color-Floor-Length-Anarkali-Frocks-Designs-for-Indian-Women.jpg" alt="Boss" style="width:80%" class="w3-circle w3-hover-opacity">
+  <h3>White Fabric</h3>
+  <p> Floor Length Anarkali Frocks Design</p>
+   
+</div>
+
+</div>
+</div>
+  
 <!-- Footer -->
-<footer id="myDIV" class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
-  <a href="#"><i class="fa fa-facebook-official"></i></a>
-  <a href="#"><i class="fa fa-pinterest-p"></i></a>
-  <a href="#"><i class="fa fa-twitter"></i></a>
-  <a href="#"><i class="fa fa-flickr"></i></a>
-  <a href="#"><i class="fa fa-linkedin"></i></a>
-  <p class="w3-medium">
-              SHOPPINGIDEAS <a href=""> http://localhost:8008/shoppingideas/</a>
-		
-  </p>
+   <footer class="w3-container  w3-padding-32 w3-theme-d1 w3-center">
+  <h4>Follow Us</h4>
+  <a class="w3-btn-floating w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-btn-floating w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+  <a class="w3-btn-floating w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+  <a class="w3-btn-floating w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+  <p>Powered by <a href="" target="_blank">http://localhost:8008/shoppingideas/</a></p>
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
+    <a class="w3-btn w3-theme" href="#myPage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
 </footer>
-
-
 
 </body>
 </html>

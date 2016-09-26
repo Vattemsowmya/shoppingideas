@@ -15,7 +15,7 @@
 <center>
 	<c:url var="addAction" value="addproduct"></c:url>
 
-		<h1>PRODUCT MODULE</h1>
+		<h1 style="text-align:center">PRODUCT MODULE</h1>
 		<form:form action="${addAction}" commandName="product" enctype="multipart/form-data" method="post">
 
 			<table class="table table-bordered table-striped">

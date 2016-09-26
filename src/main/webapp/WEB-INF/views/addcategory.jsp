@@ -31,7 +31,7 @@
 
 <body>
 <centre>
-<h1>CATEGORY MODULE</h1>
+<h1 style="text-align:center">CATEGORY MODULE</h1>
 <c:url var="addAction" value="addcategory"></c:url>
 
 	<form:form action="${addAction}" commandName="category">
@@ -65,10 +65,10 @@
 			</tr>
 			<tr>
 				<td colspan="2"><c:if test="${!empty category.name}">
-						<input type="submit"
+						<input type="submit" class="w3-btn w3-blue"
 							value="<spring:message text="Edit category"/>" />
 					</c:if> <c:if test="${empty category.name}">
-						<input type="submit" value="<spring:message text="Add category"/>" />
+						<input type="submit" class="w3-btn w3-blue" value="<spring:message text="Add category"/>" />
 					</c:if></td>
 			</tr>
 		</table>
@@ -103,9 +103,9 @@
 							<td >{{category.id}}</td>
 							<td>{{category.name}}</td>
 							<td>{{category.description}}</td>
-							<td><a class="btn btn-info btn-xs"
+							<td><a class="w3-btn w3-blue"
 								href="editcategory/{{category.id}}">Edit</a></td>
-							<td><a class="btn btn-danger btn-xs"
+							<td><a class="w3-btn w3-blue"
 								href="removecategory/{{category.id}}">Delete</a></td>
 						</tr>
 					</tbody>
